@@ -51,8 +51,7 @@ const BakeryContainers = () => {
         }
     ]);
    
-    let total = (victoriaSpongeSold*cakes[0].price) + (teaLoafSold*cakes[1].price) + (carrotCakeSold*cakes[2].price) ;
-
+    let total = (victoriaSpongeSold*cakes[0].price) + (teaLoafSold*cakes[1].price) + (carrotCakeSold*cakes[2].price);
     console.log(cakes[1]);
     return ( 
         <>
