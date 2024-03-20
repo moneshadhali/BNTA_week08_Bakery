@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    color: rgb(75, 60, 39);
+}
+
+.container{
+    padding: 2%;
+}
+
+.container h1{
+    padding: 2% 0;
+    text-align: center;
+}
+
+.container h4{
+    padding-top: 2%;
+}
+
+.cakes{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.cake{
+    flex-direction: column;
+    background-color: blanchedalmond;
+    padding: 2%;
+    border: 1px solid rgb(189, 179, 179);
+    border-radius: 10px;
+}
+
+.cake button{
+    background-color: rgb(213, 190, 162);
+    border: 1px solid rgb(189, 179, 179);
+    border-radius: 10px;
+    padding: 2% 10%;
+    margin-top: 5%;
+    width: 100%;
+}

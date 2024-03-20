@@ -14,9 +14,9 @@ const Cake = ({cakeName, ingredients, price, rating,itemSold, onButtonClick}) =>
             <h3>Cake name: {cakeName} </h3>
             <p>Ingredients:</p>
             <ul>{createIngredients}</ul>
-            <p>price: {price}</p>
-            <p>rating: {rating}</p>
-            <p>Item Sold: {itemSold}</p>
+            <p>Price: {price}</p>
+            <p>Rating: {rating}</p>
+            {/* <p>Item Sold: {itemSold}</p> */}
             <button onClick={handleSaleOfCake}>Sell Cake</button>
         </div>
     );
