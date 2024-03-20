@@ -1,24 +1,24 @@
 const Cake = ({cakeName, ingredients, price, rating,itemSold, onButtonClick}) => {
-    const createIngredients = (ingredients) => {
-        ingredients.map((ingredient) => {
-            return(
-                <li>{ingredient}</li>
-            )
-        })
-    }
+    
+    const createIngredients = ingredients.map((ingredient, index)=>{
+        return(
+            <li key={index}>{ingredient}</li>
+        )
+    });
+
     const handleSaleOfCake = () => {
         onButtonClick(itemSold+1);
     }
     return ( 
-        <>
-            <h2>Cake name: {cakeName} </h2>
+        <div className="cake">
+            <h3>Cake name: {cakeName} </h3>
             <p>Ingredients:</p>
-            {/* <ul>{createIngredients}</ul> */}
+            <ul>{createIngredients}</ul>
             <p>price: {price}</p>
             <p>rating: {rating}</p>
             <p>Item Sold: {itemSold}</p>
-            <button onClick={handleSaleOfCake}>Sell Item</button>
-        </>
+            <button onClick={handleSaleOfCake}>Sell Cake</button>
+        </div>
     );
 }
  

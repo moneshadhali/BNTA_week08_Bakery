@@ -16,7 +16,7 @@ const BakeryContainers = () => {
                    "eggs",
                   "butter",
                   "sugar",
-                      "self-raising flour",
+                    "self-raising flour",
                   "baking powder",
                   "milk"
               ],
@@ -52,30 +52,34 @@ const BakeryContainers = () => {
     ]);
    
     let total = (victoriaSpongeSold*cakes[0].price) + (teaLoafSold*cakes[1].price) + (carrotCakeSold*cakes[2].price);
-    console.log(cakes[1]);
+    let averageRating = Math.round(((cakes[0].rating+cakes[1].rating+cakes[2].rating)/cakes.length) * 100) / 100;
+    
     return ( 
-        <>
+        <div className="container">
             <h1>Bakeries</h1>
-            <Cake cakeName = {cakes[0].cakeName} 
-                ingredients = {cakes[0].ingredients} 
-                price = {cakes[0].price} 
-                rating = {cakes[0].rating}
-                itemSold = {victoriaSpongeSold}
-                onButtonClick = {setVictoriaSpongeSold}/>
-            <Cake cakeName = {cakes[1].cakeName} 
-                ingredients = {cakes[1].ingredients} 
-                price = {cakes[1].price} 
-                rating = {cakes[1].rating}
-                itemSold = {teaLoafSold}
-                onButtonClick = {setTeaLoafSold}/>
-            <Cake cakeName = {cakes[2].cakeName} 
-                ingredients = {cakes[2].ingredients} 
-                price = {cakes[2].price} 
-                rating = {cakes[2].rating}
-                itemSold = {carrotCakeSold}
-                onButtonClick = {setCarrotCakeSold}/>
+            <div className="cakes">
+                <Cake cakeName = {cakes[0].cakeName} 
+                    ingredients = {cakes[0].ingredients} 
+                    price = {cakes[0].price} 
+                    rating = {cakes[0].rating}
+                    itemSold = {victoriaSpongeSold}
+                    onButtonClick = {setVictoriaSpongeSold}/>
+                <Cake cakeName = {cakes[1].cakeName} 
+                    ingredients = {cakes[1].ingredients} 
+                    price = {cakes[1].price} 
+                    rating = {cakes[1].rating}
+                    itemSold = {teaLoafSold}
+                    onButtonClick = {setTeaLoafSold}/>
+                <Cake cakeName = {cakes[2].cakeName} 
+                    ingredients = {cakes[2].ingredients} 
+                    price = {cakes[2].price} 
+                    rating = {cakes[2].rating}
+                    itemSold = {carrotCakeSold}
+                    onButtonClick = {setCarrotCakeSold}/>
+            </div>
             <h4>Total Revenue of Bakery: {total}</h4>
-        </>
+            <h4>Average Rating of Bakery: {averageRating}</h4>
+        </div>
     );
 }
  
